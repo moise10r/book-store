@@ -2,6 +2,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import Book from './book';
+import AddBook from './addBook';
 
 const BookList = ({ books }) => (
   <div className="books-main-wrapper">
@@ -14,6 +15,7 @@ const BookList = ({ books }) => (
       ))
       }
     </ul>
+    <AddBook />
   </div>
 );
 
