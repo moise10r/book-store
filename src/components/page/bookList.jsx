@@ -45,13 +45,13 @@ const BookList = () => {
     category: '',
   });
 
-  const onChange = ({ target: input }) => {
+  const handleChange = ({ target: input }) => {
     const valueObj = { ...value };
     valueObj[input.name] = input.value;
     setvalue(valueObj);
   };
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const bookCollection = [...books];
     const newBook = {
@@ -60,13 +60,19 @@ const BookList = () => {
       title: value.title,
       author: 'Suzanne Collins',
       progress: {
-        completPercentage: '0',
+        completPercentage: '50',
         status: 'completed',
       },
       currentChapter: 'Introduction',
     };
     bookCollection.push(newBook);
     setBooks(bookCollection);
+  };
+
+  const handleClick = (id) => {
+    const bookCollection = [...books];
+    const filteredBook = bookCollection.filter((book) => book.id !== id);
+    setBooks(filteredBook);
   };
 
   useEffect(() => {
@@ -79,12 +85,12 @@ const BookList = () => {
           {
       books.map((book) => (
         <li key={book.id} className="book">
-          <Book book={book} />
+          <Book book={book} onClick={handleClick} />
         </li>
       ))
       }
         </ul>
-        <AddBook onChange={onChange} onSubmit={onSubmit} value={value} />
+        <AddBook onChange={handleChange} onSubmit={handleSubmit} value={value} />
       </div>
     </div>
   );
