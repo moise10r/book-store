@@ -40,6 +40,17 @@ const bookList = [
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
+  const [value, setvalue] = useState({
+    title: '',
+    category: '',
+  });
+
+  const onChange = ({ target: input }) => {
+    const valueObj = { ...value };
+    valueObj[input.name] = input.value;
+    setvalue(valueObj);
+  };
+
   useEffect(() => {
     setBooks(bookList);
   }, []);
@@ -55,7 +66,7 @@ const BookList = () => {
       ))
       }
         </ul>
-        <AddBook />
+        <AddBook onChange={onChange} value={value} />
       </div>
     </div>
   );
