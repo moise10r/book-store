@@ -5,7 +5,7 @@ import { ImUser } from 'react-icons/im';
 
 const links = [
   { id: 1, to: '/', name: 'Books' },
-  { id: 1, to: '/categories', name: 'Categories' },
+  { id: 2, to: '/categories', name: 'Categories' },
 ];
 const Header = () => (
   <header className="main-header-container flex-between">

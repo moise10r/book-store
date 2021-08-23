@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Book from '../book';
 import AddBook from '../addBook';
 
@@ -39,6 +40,8 @@ const bookList = [
 ];
 
 const BookList = () => {
+  const state = useSelector((state) => state);
+  console.log(state);
   const [books, setBooks] = useState([]);
   const [value, setvalue] = useState({
     title: '',
