@@ -9,9 +9,10 @@ const books = [
     title: 'The Hunger Games',
     author: 'Suzanne Collins',
     progress: {
-      currentChapter: 'Chapter 17',
-      completed: '64',
+      completPercentage: '64',
+      status: 'completed',
     },
+    currentChapter: 'Chapter 17',
   },
   {
     id: 2,
@@ -19,9 +20,10 @@ const books = [
     title: 'Dune',
     author: 'Frank Herbert',
     progress: {
-      currentChapter: 'Chapter 3: "A Lesson Learned"',
-      completed: '8',
+      completPercentage: '8',
+      status: 'completed',
     },
+    currentChapter: 'Chapter 3: "A Lesson Learned"',
   },
   {
     id: 3,
@@ -29,9 +31,10 @@ const books = [
     title: 'Capital in the Twenty-First Century',
     author: 'Suzanne Collins',
     progress: {
-      currentChapter: 'Introduction',
-      completed: '0',
+      completPercentage: '0',
+      status: 'completed',
     },
+    currentChapter: 'Introduction',
   },
 ];
 

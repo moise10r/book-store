@@ -1,12 +1,14 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
+import propTypes from 'prop-types';
 
-const Book = () => (
+const Book = ({ book }) => (
   <div className="book-container flex-between">
     <div className="left-container">
-      <h4 className="category">Action</h4>
-      <h5 className="title">The Hunger Games</h5>
-      <span className="auth">Suzanne Collins</span>
-      <ul className="actions flex-start">
+      <h4 className="category">{book.category}</h4>
+      <h5 className="title">{book.title}</h5>
+      <span className="auth">{book.author}</span>
+      <ul className="action-list flex-start">
         <li className="action"><a href="#2">Comment</a></li>
         <li className="action"><a href="#2">Remove</a></li>
         <li className="action"><a href="#2">Edit</a></li>
@@ -17,16 +19,22 @@ const Book = () => (
         <div className="progress-circle" />
       </div>
       <div className="percentage flex-center">
-        <span>64%</span>
-        <span>Completed</span>
+        <span>
+          {book.progress.completPercentage}
+          %
+        </span>
+        <span>{book.progress.status}</span>
       </div>
     </div>
     <div className="right-container">
       <h4 className="chapter-state">Current chapiter</h4>
-      <h5 className="Chapter">Chapter 7</h5>
+      <h5 className="Chapter">{book.currentChapter}</h5>
       <button type="button" className="btn">Update progress</button>
     </div>
   </div>
 );
 
+Book.propTypes = {
+  book: propTypes.array.isRequired,
+};
 export default Book;
