@@ -1,8 +1,9 @@
 import React from 'react';
+import Header from './header';
 
 const Main = () => (
-  <div>
-    Welcome
+  <div className="container">
+    <Header />
   </div>
 );
 
