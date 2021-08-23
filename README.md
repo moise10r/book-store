@@ -1,14 +1,9 @@
-# Math Magicians
-"Math Magicians" is a web application for all fans of mathematics. It permits clients to form straightforward calculations "
-
-![ca](https://user-images.githubusercontent.com/57562869/129978234-3d5ef9b3-00bd-4dee-a183-d6468f28a5ee.png)
+# Book Store
+"This is a web application for managing list of books "
 
 
 
 > This is a calculator that solves advanced problems in Physics, Mathematics.
-
-## Live demo
-[Live Demo](https://zealous-booth-f687ea.netlify.app/)
 
 ## Built With
 
@@ -23,8 +18,8 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 ```bash
-git clone git@github.com:moise10r/math-magicians.git
-cd ./math-magicians
+git clone git@github.com:moise10r/book-store.git
+cd ./book-store
 ```
 
 ### Install
