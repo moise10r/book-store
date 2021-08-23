@@ -1,48 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBook, removeBook } from '../../redux/books/books';
 import Book from '../book';
 import AddBook from '../addBook';
 
-const bookList = [
-  {
-    id: 1,
-    category: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    progress: {
-      completPercentage: '64',
-      status: 'completed',
-    },
-    currentChapter: 'Chapter 17',
-  },
-  {
-    id: 2,
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    progress: {
-      completPercentage: '8',
-      status: 'completed',
-    },
-    currentChapter: 'Chapter 3: "A Lesson Learned"',
-  },
-  {
-    id: 3,
-    category: 'Economy',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    progress: {
-      completPercentage: '0',
-      status: 'completed',
-    },
-    currentChapter: 'Introduction',
-  },
-];
-
 const BookList = () => {
-  const state = useSelector((state) => state);
-  console.log(state);
-  const [books, setBooks] = useState([]);
+  const { booksReducer: books } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
   const [value, setvalue] = useState({
     title: '',
     category: '',
@@ -56,31 +21,18 @@ const BookList = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bookCollection = [...books];
     const newBook = {
       id: books.length,
       category: value.category,
       title: value.title,
-      author: 'Suzanne Collins',
-      progress: {
-        completPercentage: '50',
-        status: 'completed',
-      },
-      currentChapter: 'Introduction',
+      author: 'Moise Rush',
     };
-    bookCollection.push(newBook);
-    setBooks(bookCollection);
+    dispatch(addBook(newBook));
   };
 
   const handleClick = (id) => {
-    const bookCollection = [...books];
-    const filteredBook = bookCollection.filter((book) => book.id !== id);
-    setBooks(filteredBook);
+    dispatch(removeBook(id));
   };
-
-  useEffect(() => {
-    setBooks(bookList);
-  }, []);
   return (
     <div className="container">
       <div className="books-main-wrapper">
