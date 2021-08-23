@@ -1,11 +1,18 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
-const Select = () => (
-  <select name="selectCategory" id="select">
-    <option value="category1">Action</option>
-    <option value="category1">Science</option>
-    <option value="category1">Economy</option>
+const Select = ({ value, name, onChange }) => (
+  <select onChange={(e) => onChange(e)} name={name} value={value} id="select">
+    <option value="Action">Action</option>
+    <option value="Science">Science</option>
+    <option value="Economy">Economy</option>
   </select>
 );
+
+Select.propTypes = {
+  onChange: propTypes.func.isRequired,
+  value: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+};
 
 export default Select;
