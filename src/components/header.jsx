@@ -11,7 +11,7 @@ const Header = () => (
   <header className="main-header-container flex-between">
     <div className="left-container flex-start">
       <div className="log-wrapper">
-        <span className="logo">Bookstore CMS</span>
+        <Link to="/" className="logo">Bookstore CMS</Link>
       </div>
       <nav className="main-nav-bar">
         <ul className="link-list">
