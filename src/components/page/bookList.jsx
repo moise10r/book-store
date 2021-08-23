@@ -51,6 +51,24 @@ const BookList = () => {
     setvalue(valueObj);
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const bookCollection = [...books];
+    const newBook = {
+      id: books.length,
+      category: value.category,
+      title: value.title,
+      author: 'Suzanne Collins',
+      progress: {
+        completPercentage: '0',
+        status: 'completed',
+      },
+      currentChapter: 'Introduction',
+    };
+    bookCollection.push(newBook);
+    setBooks(bookCollection);
+  };
+
   useEffect(() => {
     setBooks(bookList);
   }, []);
@@ -66,7 +84,7 @@ const BookList = () => {
       ))
       }
         </ul>
-        <AddBook onChange={onChange} value={value} />
+        <AddBook onChange={onChange} onSubmit={onSubmit} value={value} />
       </div>
     </div>
   );
