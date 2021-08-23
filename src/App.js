@@ -1,4 +1,5 @@
 import Main from './components/main';
+import './assets/css/main.css';
 
 function App() {
   return (
