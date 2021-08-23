@@ -1,0 +1,17 @@
+.main-header-container {
+  width: 90%;
+  height: 6.25rem;
+  margin: 0 auto;
+}
+
+.main-nav-bar {
+  margin-left: 3rem;
+}
+
+.main-nav-bar .link-list {
+  display: flex;
+}
+
+.main-nav-bar .link-list .link {
+  margin-left: 1rem;
+}

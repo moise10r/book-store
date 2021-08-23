@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => (
-  <header>
+  <header className="main-header-container flex-start">
     <div className="log-wrapper">
       <span className="logo">Bookstore CMS</span>
     </div>
