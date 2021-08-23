@@ -21,10 +21,10 @@ const reducer = (state = initialState, action) => {
       return [
         ...state,
         {
-          id: state.length,
+          id: action.payload.id,
           category: action.payload.category,
           title: action.payload.title,
-          author: 'Suzanne Collins',
+          author: action.payload.author,
           progress: {
             completPercentage: '0',
             status: 'completed',
