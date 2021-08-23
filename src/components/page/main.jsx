@@ -1,6 +1,7 @@
 import React from 'react';
-import BookList from './bookList';
-import Header from './header';
+import AddBook from '../addBook';
+import BookList from '../bookList';
+import Header from '../header';
 
 const books = [
   {
@@ -42,6 +43,7 @@ const Main = () => (
   <div className="container">
     <Header />
     <BookList books={books} />
+    <AddBook />
   </div>
 );
 
