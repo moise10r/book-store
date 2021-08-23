@@ -1,7 +1,8 @@
-import React from 'react';
-import BookList from '../bookList';
+import React, { useState, useEffect } from 'react';
+import Book from '../book';
+import AddBook from '../addBook';
 
-const books = [
+const bookList = [
   {
     id: 1,
     category: 'Action',
@@ -37,10 +38,27 @@ const books = [
   },
 ];
 
-const Main = () => (
-  <div className="container">
-    <BookList books={books} />
-  </div>
-);
+const BookList = () => {
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    setBooks(bookList);
+  }, []);
+  return (
+    <div className="container">
+      <div className="books-main-wrapper">
+        <ul className="book-list flex-center">
+          {
+      books.map((book) => (
+        <li key={book.id} className="book">
+          <Book book={book} />
+        </li>
+      ))
+      }
+        </ul>
+        <AddBook />
+      </div>
+    </div>
+  );
+};
 
-export default Main;
+export default BookList;

@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
-import Main from './components/page/main';
 import './assets/css/main.css';
+import BookList from './components/page/bookList';
 import Categories from './components/page/categories';
 import Header from './components/header';
 
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/categories" component={Categories} />
-        <Route path="/" exact component={Main} />
+        <Route path="/" exact component={BookList} />
       </Switch>
     </div>
   );
