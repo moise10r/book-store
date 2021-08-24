@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Input = ({ value, name, onChange }) => (
-  <input onChange={(e) => onChange(e)} type="text" name={name} value={value} className="add-input" placeholder="Book title" />
+  <input onChange={(e) => onChange(e)} type="text" name={name} value={value} className="add-input" placeholder="Book title" required />
 );
 
 Input.propTypes = {

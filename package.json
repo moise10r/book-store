@@ -1,5 +1,5 @@
 {
-  "name": "To do list",
+  "name": "books-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,9 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "redux-logger": "^3.0.6",
+    "uuidv4": "^6.2.12",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
