@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBook, removeBook } from '../../redux/books/books';
