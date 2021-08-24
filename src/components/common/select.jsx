@@ -1,11 +1,15 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import propTypes from 'prop-types';
 
+const categories = ['Actions', 'Science', 'Economy'];
 const Select = ({ value, name, onChange }) => (
   <select onChange={(e) => onChange(e)} name={name} value={value} id="select">
-    <option value="Action">Action</option>
-    <option value="Science">Science</option>
-    <option value="Economy">Economy</option>
+    {
+      categories.map((category) => (
+        <option key={category} value={category}>{category}</option>
+      ))
+    }
   </select>
 );
 

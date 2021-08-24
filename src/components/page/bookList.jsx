@@ -10,7 +10,7 @@ const BookList = () => {
 
   const [value, setvalue] = useState({
     title: '',
-    category: '',
+    category: 'Action',
   });
 
   const handleChange = ({ target: input }) => {
