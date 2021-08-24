@@ -3,10 +3,9 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const categories = [
-  { id: 1, category: '' },
-  { id: 2, category: 'Action' },
-  { id: 3, category: 'Science' },
-  { id: 4, category: 'Economy' },
+  { id: 1, category: 'Action' },
+  { id: 2, category: 'Science' },
+  { id: 3, category: 'Economy' },
 ];
 const Select = ({ value, name, onChange }) => (
   <select onChange={(e) => onChange(e)} name={name} value={value} id="select" required>
