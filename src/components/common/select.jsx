@@ -2,12 +2,17 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const categories = ['Actions', 'Science', 'Economy'];
+const categories = [
+  { id: 1, category: '' },
+  { id: 2, category: 'Action' },
+  { id: 3, category: 'Science' },
+  { id: 4, category: 'Economy' },
+];
 const Select = ({ value, name, onChange }) => (
-  <select onChange={(e) => onChange(e)} name={name} value={value} id="select">
+  <select onChange={(e) => onChange(e)} name={name} value={value} id="select" required>
     {
-      categories.map((category) => (
-        <option key={category} value={category}>{category}</option>
+      categories.map(({ id, category }) => (
+        <option key={id} value={category}>{category}</option>
       ))
     }
   </select>
