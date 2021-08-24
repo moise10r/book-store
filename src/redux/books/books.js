@@ -8,31 +8,31 @@ const initialState = {
   error: '',
 };
 
-// export const fecthBookRequest = () => ({
-//   type: FETCH_BOOK_REQUEST,
-// });
+export const fecthBookRequest = () => ({
+  type: FETCH_BOOK_REQUEST,
+});
 
-// export const fecthBookSuccess = (books) => ({
-//   type: FECTH_BOOK_SUCCESS,
-//   payload: books,
-// });
+export const fecthBookSuccess = (books) => ({
+  type: FECTH_BOOK_SUCCESS,
+  payload: books,
+});
 
-// export const fecthBookFailure = (error) => ({
-//   type: FECTH_BOOK_FAILURE,
-//   payload: error,
-// });
+export const fecthBookFailure = (error) => ({
+  type: FECTH_BOOK_FAILURE,
+  payload: error,
+});
 
-// export const addBook = (payload) => ({
-//   type: ADD_BOOK,
-//   payload,
-// });
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
+});
 
-// export const removeBook = (id) => ({
-//   type: REMOVE_BOOK,
-//   payload: {
-//     id,
-//   },
-// });
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: {
+    id,
+  },
+});
 
 // const reducer = (state = initialState, action) => {
 //   switch (action.type) {
