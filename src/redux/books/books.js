@@ -22,18 +22,6 @@ export const fecthBookFailure = (error) => ({
   payload: error,
 });
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
-
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  payload: {
-    id,
-  },
-});
-
 // const reducer = (state = initialState, action) => {
 //   switch (action.type) {
 //     case FETCH_BOOK_REQUEST:
