@@ -37,7 +37,14 @@ const Book = ({ book, onClick }) => (
 );
 
 Book.propTypes = {
-  book: propTypes.arrayOf(propTypes.string).isRequired,
+  book: propTypes.shape({
+    id: propTypes.number,
+    category: propTypes.string,
+    title: propTypes.string,
+    author: propTypes.string,
+    progress: propTypes.objectOf(propTypes.string),
+    currentChapter: propTypes.string,
+  }).isRequired,
   onClick: propTypes.func.isRequired,
 };
 export default Book;
