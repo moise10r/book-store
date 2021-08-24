@@ -2,11 +2,11 @@ const FETCH_BOOK_REQUEST = 'FETCH_BOOK_REQUEST';
 const FECTH_BOOK_SUCCESS = 'FETCH_BOOK_SUCCESS';
 const FECTH_BOOK_FAILURE = 'FECTH_BOOK_FAILURE';
 
-// const initialState = {
-//   loading: false,
-//   books: [],
-//   error: '',
-// };
+const initialState = {
+  loading: false,
+  books: [],
+  error: '',
+};
 
 // export const fecthBookRequest = () => ({
 //   type: FETCH_BOOK_REQUEST,
