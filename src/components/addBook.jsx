@@ -21,6 +21,6 @@ const AddBook = ({ onChange, onSubmit, value }) => (
 AddBook.propTypes = {
   onChange: propTypes.func.isRequired,
   onSubmit: propTypes.func.isRequired,
-  value: propTypes.string.isRequired,
+  value: propTypes.objectOf(propTypes.string).isRequired,
 };
 export default AddBook;
