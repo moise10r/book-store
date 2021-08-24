@@ -2,9 +2,6 @@
 "This is a web application for managing list of books "
 
 
-
-> This is a calculator that solves advanced problems in Physics, Mathematics.
-
 ## Built With
 
 - ReactJS
