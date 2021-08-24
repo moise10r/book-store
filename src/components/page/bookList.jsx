@@ -25,7 +25,7 @@ const BookList = () => {
       id: books.length,
       category: value.category,
       title: value.title,
-      author: 'Moise Rush',
+      author: 'Moise Rushanika',
     };
     dispatch(addBook(newBook));
   };
