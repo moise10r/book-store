@@ -10,7 +10,7 @@ const BookList = () => {
 
   const [value, setvalue] = useState({
     title: '',
-    category: 'Action',
+    category: '',
   });
 
   const handleChange = ({ target: input }) => {
@@ -27,6 +27,7 @@ const BookList = () => {
       title: value.title,
       author: 'Moise Rushanika',
     };
+    setvalue({ ...value, title: '', category: '' });
     dispatch(addBook(newBook));
   };
 
