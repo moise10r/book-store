@@ -1,0 +1,31 @@
+.books-main-wrapper {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.book-list {
+  width: 95%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.book-list .book {
+  width: 100%;
+  padding: 2rem 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 2rem;
+}
+
+.percentage {
+  flex-direction: column;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.action-list .action {
+  margin-right: 1rem;
+}
