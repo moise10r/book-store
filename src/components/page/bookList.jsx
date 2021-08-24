@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBook, removeBook } from '../../redux/books/books';
@@ -22,7 +23,7 @@ const BookList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {
-      id: books.length,
+      id: Math.random(),
       category: value.category,
       title: value.title,
       author: 'Moise Rushanika',

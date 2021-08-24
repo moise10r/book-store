@@ -38,7 +38,7 @@ const Book = ({ book, onClick }) => (
 
 Book.propTypes = {
   book: propTypes.shape({
-    id: propTypes.number,
+    id: propTypes.string,
     category: propTypes.string,
     title: propTypes.string,
     author: propTypes.string,
