@@ -22,28 +22,28 @@ export const fecthBookFailure = (error) => ({
   payload: error,
 });
 
-// const reducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case FETCH_BOOK_REQUEST:
-//       return {
-//         ...state,
-//         loading: true,
-//       };
-//     case FECTH_BOOK_SUCCESS:
-//       return {
-//         loading: false,
-//         books: action.payload,
-//         error: '',
-//       };
-//     case FECTH_BOOK_FAILURE:
-//       return {
-//         loading: false,
-//         books: [],
-//         error: action.payload,
-//       };
-//     default:
-//       return state;
-//   }
-// };
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_BOOK_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case FECTH_BOOK_SUCCESS:
+      return {
+        loading: false,
+        books: action.payload,
+        error: '',
+      };
+    case FECTH_BOOK_FAILURE:
+      return {
+        loading: false,
+        books: [],
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 
 export default reducer;
