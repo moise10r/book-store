@@ -20,7 +20,6 @@ export const getBooks = () => async (dispatch) => {
 
 export const deleteBook = (id) => async (dispatch) => {
   const { data } = await axios.delete(`${baseUrl}${apiKey}/books/${id}`);
-  console.log(data);
   if (data === 'The book was deleted successfully!') {
     dispatch({
       type: DELETE_BOOK,

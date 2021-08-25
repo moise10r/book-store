@@ -6,7 +6,6 @@ import AddBook from '../addBook';
 
 const BookList = () => {
   const { booksReducer: books } = useSelector((state) => state);
-  console.log(books);
   const dispatch = useDispatch();
   const [value, setvalue] = useState({
     title: '',
