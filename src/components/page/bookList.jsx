@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBooks } from '../../redux/books/books';
+import { getBooks, addBook } from '../../redux/books/books';
 import Book from '../book';
 import AddBook from '../addBook';
 
@@ -26,8 +26,7 @@ const BookList = () => {
       category: value.category,
       title: value.title,
     };
-    console.log(newBook);
-    // dispatch(addBook(newBook));
+    dispatch(addBook(newBook));
     setvalue({ ...value, title: '' });
   };
 
@@ -35,7 +34,6 @@ const BookList = () => {
     // dispatch(removeBook(id));
     console.log(id);
   };
-  // let books = [];
   useEffect(() => {
     dispatch(getBooks());
   }, []);
