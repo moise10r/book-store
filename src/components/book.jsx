@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
@@ -12,7 +13,7 @@ const Book = ({ book, onClick }) => (
       <span className="auth">{book.author}</span>
       <ul className="action-list flex-start">
         <li className="action"><a href="#2">Comment</a></li>
-        <li onClick={() => onClick(book.id)} role="menu" className="action"><a href="#2">Remove</a></li>
+        <li onClick={() => onClick(book.item_id)} role="menu" className="action"><a href="#2">Remove</a></li>
         <li className="action"><a href="#2">Edit</a></li>
       </ul>
     </div>

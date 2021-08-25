@@ -37,13 +37,14 @@ const BookList = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, []);
+  console.log('render');
   return (
     <div className="container">
       <div className="books-main-wrapper">
         <ul className="book-list flex-center">
           {
-      [].map((book) => (
-        <li key={book.id} className="book">
+      books.map((book) => (
+        <li key={book.item_id} className="book">
           <Book book={book} onClick={handleClick} />
         </li>
       ))

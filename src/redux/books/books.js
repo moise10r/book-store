@@ -10,17 +10,6 @@ const initialState = [];
 const apiKey = 'KbiaiTAThbC5mkqPt08M';
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 
-export const addBook = (book) => async (dispatch) => {
-  const { data } = await axios.post(`${baseUrl}${apiKey}/books/`, book, {
-    headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
-    },
-  });
-  dispatch({
-    type: ADD_BOOK,
-    payload: data,
-  });
-};
 export const getBooks = () => async (dispatch) => {
   const res = await axios.get(`${baseUrl}${apiKey}/books/`);
   dispatch({
@@ -29,26 +18,48 @@ export const getBooks = () => async (dispatch) => {
   });
 };
 
+export const addBook = (book) => async (dispatch) => {
+  const { data } = await axios.post(`${baseUrl}${apiKey}/books/`, book, {
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+    },
+  });
+  if (data === 'Created') {
+    dispatch({
+      type: ADD_BOOK,
+      payload: book,
+    });
+  }
+};
+
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FECTH_BOOK:
-      return action.payload;
-    case ADD_BOOK: {
-      console.log(action.payload);
-      const saved = Object.entries(action.payload).map(([key, value]) => {
+    case ADD_BOOK:
+      return [...state, {
+        ...action.payload,
+        author: 'Moise Rushanika',
+        progress: {
+          completPercentage: '35',
+          status: 'completed',
+        },
+        currentChapter: 'Introduction',
+      }];
+    case FECTH_BOOK: {
+      const book = Object.entries(action.payload).map(([key, value]) => {
         const [book] = value;
         return {
           item_id: key,
           ...book,
-          author: 'Author not set',
+          author: 'Moise Rushanika',
           progress: {
-            currentChapter: 'Introduction',
-            completed: '0',
+            completPercentage: '35',
+            status: 'completed',
           },
+          currentChapter: 'Introduction',
         };
       });
 
-      return state.concat(saved);
+      return state.concat(book);
     }
     // case DELETE_BOOK:
     //   return state.filter(({ id }) => id !== action.payload.id);
