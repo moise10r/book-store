@@ -71,7 +71,7 @@ const booksReducer = (state = initialState, action) => {
         };
       });
 
-      return state.concat(book);
+      return [...state, ...book];
     }
     default:
       return state;
