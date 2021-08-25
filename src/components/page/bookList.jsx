@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBooks, addBook } from '../../redux/books/books';
+import { getBooks, addBook, deleteBook } from '../../redux/books/books';
 import Book from '../book';
 import AddBook from '../addBook';
 
@@ -20,7 +20,6 @@ const BookList = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     const newBook = {
       item_id: Math.random(),
       category: value.category,
@@ -28,16 +27,15 @@ const BookList = () => {
     };
     dispatch(addBook(newBook));
     setvalue({ ...value, title: '' });
+    e.preventDefault();
   };
 
   const handleClick = (id) => {
-    // dispatch(removeBook(id));
-    console.log(id);
+    dispatch(deleteBook(id));
   };
   useEffect(() => {
     dispatch(getBooks());
   }, []);
-  console.log('render');
   return (
     <div className="container">
       <div className="books-main-wrapper">

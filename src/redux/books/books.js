@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const FECTH_BOOK = 'FECTH_BOOK';
 const ADD_BOOK = 'ADD_BOOK';
-// const DELETE_BOOK = 'DELETE_BOOK';
+const DELETE_BOOK = 'DELETE_BOOK';
 
 const initialState = [];
 
@@ -16,6 +16,17 @@ export const getBooks = () => async (dispatch) => {
     type: FECTH_BOOK,
     payload: res.data,
   });
+};
+
+export const deleteBook = (id) => async (dispatch) => {
+  const { data } = await axios.delete(`${baseUrl}${apiKey}/books/${id}`);
+  console.log(data);
+  if (data === 'The book was deleted successfully!') {
+    dispatch({
+      type: DELETE_BOOK,
+      payload: id,
+    });
+  }
 };
 
 export const addBook = (book) => async (dispatch) => {
@@ -34,6 +45,8 @@ export const addBook = (book) => async (dispatch) => {
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
+    case DELETE_BOOK:
+      return state.filter(({ item_id }) => item_id !== action.payload);
     case ADD_BOOK:
       return [...state, {
         ...action.payload,
@@ -61,29 +74,9 @@ const booksReducer = (state = initialState, action) => {
 
       return state.concat(book);
     }
-    // case DELETE_BOOK:
-    //   return state.filter(({ id }) => id !== action.payload.id);
     default:
       return state;
   }
 };
 
 export default booksReducer;
-
-// return [...state, {
-//   ...action.payload,
-//   author: 'Moise Rushanika',
-//   progress: {
-//     completPercentage: '35',
-//     status: 'completed',
-//   },
-//   currentChapter: 'Introduction',
-// }];
-
-// await fetch(`${baseUrl}${apiKey}/books/`, {
-//   method: 'POST',
-//   body: JSON.stringify(book),
-//   headers: {
-//     'Content-type': 'application/json; charset=UTF-8',
-//   },
-// });
