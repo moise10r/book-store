@@ -14,6 +14,10 @@
   height: 100%;
 }
 
+.log-wrapper .logo {
+  font-size: 1.875rem;
+}
+
 .main-nav-bar {
   margin-left: 3rem;
 }
