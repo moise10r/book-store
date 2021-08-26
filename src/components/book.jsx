@@ -17,7 +17,7 @@ const Book = ({ book, onClick }) => (
         <li className="action"><a href="#2">Edit</a></li>
       </ul>
     </div>
-    <div className="cener-container">
+    <div className="center-container">
       <div className="progress">
         <div className="progress-circle" />
       </div>
