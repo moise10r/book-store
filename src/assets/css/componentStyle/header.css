@@ -40,4 +40,5 @@
 
 .main-nav-bar .link-list .link a.active {
   color: var(--secondary-text-color);
+  font-weight: 400;
 }
