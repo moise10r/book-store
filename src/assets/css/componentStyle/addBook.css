@@ -38,11 +38,19 @@
 }
 
 #add-book .right-container #select {
-  padding: 0.7rem 6rem;
+  width: 50%;
+  max-width: 400px;
+  height: 2.745rem;
   font-size: 1rem;
   border-radius: 0.4rem;
   border: 1px solid var(--boder-color);
   color: #888888;
+  padding: 0 0.5rem;
+}
+
+#add-book .right-container #select option {
+  /* text-align: left; */
+  display: block;
 }
 
 #add-book .right-container .submut-btn {
