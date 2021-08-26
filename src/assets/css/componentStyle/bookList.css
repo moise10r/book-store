@@ -33,6 +33,25 @@
   color: var(--text-color);
 }
 
+.book-list .book .action-list {
+  margin-top: 1rem;
+}
+
+.book-list .book .action-list .action {
+  border-right: 2px solid var(--boder-color);
+  padding-right: 1rem;
+}
+
+.book-list .book .action-list .action:last-child {
+  border-right: 0;
+}
+
+.book-list .book .action-list .action a {
+  font-size: 0.87rem;
+  font-family: 'robotoSlab-light';
+  color: var(--text-color);
+}
+
 .percentage {
   flex-direction: column;
 }
