@@ -16,6 +16,11 @@
   margin-bottom: 2rem;
 }
 
+.book-list .book .category {
+  color: var(--primary-text-color);
+  font-size: 1rem;
+}
+
 .percentage {
   flex-direction: column;
 }
