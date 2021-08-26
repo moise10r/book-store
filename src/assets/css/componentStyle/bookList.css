@@ -21,6 +21,12 @@
   font-size: 1rem;
 }
 
+.book-list .book .title {
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+  font-family: 'robotoSlab-bold';
+}
+
 .percentage {
   flex-direction: column;
 }
