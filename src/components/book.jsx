@@ -18,8 +18,11 @@ const Book = ({ book, onClick }) => (
       </ul>
     </div>
     <div className="center-container">
-      <div className="progress">
-        <div className="progress-circle" />
+      <div className="progress-circle over50 p77">
+        <div className="left-half-clipper">
+          <div className="first50-bar" />
+          <div className="value-bar" />
+        </div>
       </div>
       <div className="percentage flex-center">
         <span>
