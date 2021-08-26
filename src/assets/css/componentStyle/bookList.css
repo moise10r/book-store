@@ -128,7 +128,7 @@
   font-size: 0.875rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: rgb(124, 123, 123);
+  color: #7c7b7b;
 }
 
 .percentage span:first-child {
@@ -144,4 +144,15 @@
 
 .action-list .action {
   margin-right: 1rem;
+}
+
+.right-container {
+  align-items: flex-start;
+}
+
+.chapter-state {
+  font-size: 0.813rem;
+  color: #7c7b7b;
+  font-family: 'robotoSlab-light';
+  margin-bottom: 0.6rem;
 }
