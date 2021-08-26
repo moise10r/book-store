@@ -4,7 +4,7 @@ import Input from './common/input';
 import Select from './common/select';
 
 const AddBook = ({ onChange, onSubmit, value }) => (
-  <section className="add-book-seciton">
+  <section className="add-book-section">
     <div className="add-book-main-container">
       <h3 className="title">ADD NEW BOOK</h3>
       <form id="add-book" className="flex-between" onSubmit={onSubmit}>

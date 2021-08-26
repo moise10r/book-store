@@ -1,10 +1,11 @@
 .add-book-section {
   width: 100%;
-  background-color: red;
+  padding-top: 2rem;
+  border-top: 2px solid #e8e8e8;
 }
 
 .add-book-main-container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
