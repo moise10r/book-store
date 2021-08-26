@@ -59,11 +59,11 @@ const booksReducer = (state = initialState, action) => {
         currentChapter: 'Introduction',
       }];
     case FECTH_BOOK: {
-      const book = Object.entries(action.payload).map(([key, value]) => {
-        const [book] = value;
+      const books = Object.entries(action.payload).forEach(([key, value]) => {
+        const [content] = value;
         return {
           item_id: key,
-          ...book,
+          ...content,
           author: 'Moise Rushanika',
           progress: {
             completPercentage: '35',
@@ -73,7 +73,7 @@ const booksReducer = (state = initialState, action) => {
         };
       });
 
-      return [...state, ...book];
+      return [...state, ...books];
     }
     default:
       return state;
