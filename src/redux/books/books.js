@@ -11,10 +11,10 @@ const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 
 /* Actions creator */
 export const getBooks = () => async (dispatch) => {
-  const res = await axios.get(`${baseUrl}${apiKey}/books/`);
+  const { data } = await axios.get(`${baseUrl}${apiKey}/books/`);
   dispatch({
     type: FECTH_BOOK,
-    payload: res.data,
+    payload: data,
   });
 };
 
