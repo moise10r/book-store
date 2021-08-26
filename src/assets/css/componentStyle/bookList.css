@@ -27,6 +27,12 @@
   font-family: 'robotoSlab-bold';
 }
 
+.book-list .book .auth {
+  font-size: 0.87rem;
+  font-family: 'robotoSlab-light';
+  color: var(--text-color);
+}
+
 .percentage {
   flex-direction: column;
 }
