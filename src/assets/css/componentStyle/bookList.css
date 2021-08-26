@@ -124,6 +124,13 @@
   flex-direction: column;
 }
 
+.percentage span {
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: rgb(124, 123, 123);
+}
+
 .percentage span:first-child {
   font-size: 2rem;
   color: var(--secondary-text-color);
