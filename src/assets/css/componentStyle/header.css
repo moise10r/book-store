@@ -5,7 +5,7 @@
 }
 
 .main-wrapper {
-  width: 90%;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
 }
@@ -16,6 +16,8 @@
 
 .log-wrapper .logo {
   font-size: 1.875rem;
+  font-family: 'robotoSlab-bold';
+  color: var(--text-color);
 }
 
 .main-nav-bar {

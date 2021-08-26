@@ -10,6 +10,18 @@
   font-family: 'Roboto', sans-serif;
 }
 
+@font-face {
+  font-family: 'robotoSlab-bold';
+  font-weight: 900;
+  src: url('./RobotoSlab-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'robotoSlab-light';
+  font-weight: 700;
+  src: url('./RobotoSlab-Light.ttf');
+}
+
 :root {
   --text-color: #0290ff;
   --secondary-text-color:#121212;
