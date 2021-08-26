@@ -4,8 +4,6 @@
 @import url('./componentStyle/bookList.css');
 @import url('./componentStyle/addBook.css');
 
-
-
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -51,7 +49,7 @@ body::-webkit-scrollbar-thumb {
 
 :root {
   --text-color: #0290ff;
-  --secondary-text-color:#121212;
+  --secondary-text-color: #121212;
   --primary-text-color: #535353;
   --boder-color: #e8e8e8;
 }
@@ -118,7 +116,7 @@ a {
   margin-right: 5rem;
   font-size: 3rem;
   font-style: italic;
-  font-family: 'robotoSlab-light';
+  font-family: 'robotoSlab-light', sans-serif;
   color: var(--text-color);
 }
 

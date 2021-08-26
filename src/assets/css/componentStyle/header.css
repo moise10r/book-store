@@ -2,7 +2,7 @@
   width: 100%;
   height: 6.25rem;
   border-bottom: 1.5px solid #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@
 
 .log-wrapper .logo {
   font-size: 1.875rem;
-  font-family: 'robotoSlab-bold';
+  font-family: 'robotoSlab-bold', sans-serif;
   color: var(--text-color);
 }
 

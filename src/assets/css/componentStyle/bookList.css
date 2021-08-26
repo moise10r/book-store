@@ -17,20 +17,24 @@
 }
 
 .book-list .book .category {
-  color: #888888;
+  color: #888;
   font-size: 0.873rem;
 }
 
 .book-list .book .title {
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
-  font-family: 'robotoSlab-bold';
+  font-family: 'robotoSlab-bold', sans-serif;
 }
 
 .book-list .book .auth {
   font-size: 0.87rem;
-  font-family: 'robotoSlab-light';
+  font-family: 'robotoSlab-light', sans-serif;
   color: var(--text-color);
+}
+
+.action-list .action {
+  margin-right: 1rem;
 }
 
 .book-list .book .action-list {
@@ -48,7 +52,7 @@
 
 .book-list .book .action-list .action a {
   font-size: 0.87rem;
-  font-family: 'robotoSlab-light';
+  font-family: 'robotoSlab-light', sans-serif;
   color: var(--text-color);
 }
 
@@ -63,25 +67,26 @@
   padding: 0;
   width: 5em;
   height: 5em;
-  background-color: var(--boder-color); 
+  background-color: var(--boder-color);
   border-radius: 50%;
   line-height: 5em;
 }
-.progress-circle:after{
-   border: none;
-   position: absolute;
-   top: 0.35em;
-   left: 0.35em;
-   text-align: center;
-   display: block;
-   border-radius: 50%;
-   width: 4.3em;
-   height: 4.3em;
-   background-color: #ffffff;
-   content: " ";
+
+.progress-circle::after {
+  border: none;
+  position: absolute;
+  top: 0.35em;
+  left: 0.35em;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  width: 4.3em;
+  height: 4.3em;
+  background-color: #fff;
+  content: " ";
 }
 
-.left-half-clipper { 
+.left-half-clipper {
   border-radius: 50%;
   width: 5em;
   height: 5em;
@@ -90,7 +95,7 @@
 }
 
 .progress-circle.over50 .left-half-clipper {
-  clip: rect(auto,auto,auto,auto);
+  clip: rect(auto, auto, auto, auto);
 }
 
 .value-bar {
@@ -101,8 +106,8 @@
   border-radius: 50%;
   border: 0.45em solid var(--text-color);
   box-sizing: border-box;
- 
 }
+
 .progress-circle.over50 .first50-bar {
   position: absolute;
   clip: rect(0, 5em, 5em, 2.5em);
@@ -112,12 +117,12 @@
   height: 5em;
 }
 
-.progress-circle:not(.over50) .first50-bar { 
-  display: none; 
+.progress-circle:not(.over50) .first50-bar {
+  display: none;
 }
 
-.progress-circle.p77 .value-bar { 
-  transform: rotate(281deg); 
+.progress-circle.p77 .value-bar {
+  transform: rotate(281deg);
 }
 
 .percentage {
@@ -136,10 +141,6 @@
   color: var(--secondary-text-color);
 }
 
-.action-list .action {
-  margin-right: 1rem;
-}
-
 .right-container {
   align-items: flex-start;
 }
@@ -147,12 +148,12 @@
 .chapter-state {
   font-size: 0.813rem;
   color: #7c7b7b;
-  font-family: 'robotoSlab-light';
+  font-family: 'robotoSlab-light', sans-serif;
   margin-bottom: 0.4rem;
 }
 
 .Chapter {
-  font-family: 'robotoSlab-light';
+  font-family: 'robotoSlab-light', sans-serif;
   font-size: 0.99rem;
   font-weight: 400;
   color: var(--secondary-text-color);
@@ -161,11 +162,11 @@
 .btn {
   padding: 0.5rem 1.7rem;
   margin-top: 1rem;
-  font-family: 'robotoSlab-light';
+  font-family: 'robotoSlab-light', sans-serif;
   border-radius: 0.4rem;
   background-color: var(--text-color);
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 .btn:hover {
