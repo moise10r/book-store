@@ -48,9 +48,8 @@
   padding: 0 0.5rem;
 }
 
-#add-book .right-container #select option {
-  /* text-align: left; */
-  display: block;
+#add-book .right-container #select:focus {
+  border: 1px solid var(--text-color);
 }
 
 #add-book .right-container .submut-btn {
