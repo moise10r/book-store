@@ -17,8 +17,8 @@
 }
 
 .book-list .book .category {
-  color: var(--primary-text-color);
-  font-size: 1rem;
+  color: #888888;
+  font-size: 0.873rem;
 }
 
 .book-list .book .title {
