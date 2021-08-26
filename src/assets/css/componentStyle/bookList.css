@@ -67,7 +67,6 @@
   border-radius: 50%;
   line-height: 5em;
 }
-/* 
 .progress-circle:after{
    border: none;
    position: absolute;
@@ -81,6 +80,7 @@
    background-color: #ffffff;
    content: " ";
 }
+/* 
 
 .left-half-clipper { 
   border-radius: 50%;
