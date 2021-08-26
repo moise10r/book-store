@@ -42,3 +42,15 @@
   color: var(--secondary-text-color);
   font-weight: 400;
 }
+
+.auth button {
+  padding: 0.8rem;
+  border: 0.1rem solid var(--boder-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.auth button .auth-icon {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}

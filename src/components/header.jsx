@@ -30,7 +30,7 @@ const Header = () => {
           </nav>
         </div>
         <div className="auth">
-          <button type="button">
+          <button type="button" className="flex-center">
             <IconContext.Provider value={{ className: 'auth-icon' }}>
               <ImUser />
             </IconContext.Provider>
