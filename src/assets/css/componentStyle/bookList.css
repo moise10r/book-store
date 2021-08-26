@@ -154,5 +154,12 @@
   font-size: 0.813rem;
   color: #7c7b7b;
   font-family: 'robotoSlab-light';
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.Chapter {
+  font-family: 'robotoSlab-light';
+  font-size: 0.99rem;
+  font-weight: 400;
+  color: var(--secondary-text-color);
 }
