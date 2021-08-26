@@ -59,7 +59,7 @@ const booksReducer = (state = initialState, action) => {
         currentChapter: 'Introduction',
       }];
     case FECTH_BOOK: {
-      const books = Object.entries(action.payload).forEach(([key, value]) => {
+      const books = Object.entries(action.payload).map(([key, value]) => {
         const [content] = value;
         return {
           item_id: key,
@@ -73,7 +73,7 @@ const booksReducer = (state = initialState, action) => {
         };
       });
 
-      return [...state, ...books];
+      return state.concat(books);
     }
     default:
       return state;
