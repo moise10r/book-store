@@ -50,7 +50,8 @@ li {
 }
 
 button,
-input {
+input,
+select {
   outline: none;
   border: none;
   background-color: transparent;
@@ -92,5 +93,5 @@ a {
 .container {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 4rem;
+  padding-bottom: 7rem;
 }

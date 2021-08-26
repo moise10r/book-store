@@ -34,20 +34,27 @@
 }
 
 #add-book .right-container {
-  width: 40%;
+  width: 45%;
 }
 
 #add-book .right-container #select {
-  padding: 0.7rem 3rem;
+  padding: 0.7rem 6rem;
   font-size: 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--boder-color);
+  color: #888888;
 }
 
 #add-book .right-container .submut-btn {
-  padding: 0.7rem 3rem;
+  padding: 0.8rem 4rem;
   cursor: pointer;
   background-color: var(--text-color);
   font-size: 0.813rem;
   color: #ffffff;
   font-family: 'robotoSlab-bold';
   border-radius: 0.4rem;
+}
+
+#add-book .right-container .submut-btn:hover {
+  background-color: #0382e4;
 }
