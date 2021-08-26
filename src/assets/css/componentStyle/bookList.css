@@ -136,12 +136,6 @@
   color: var(--secondary-text-color);
 }
 
-.btn {
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #000;
-  cursor: pointer;
-}
-
 .action-list .action {
   margin-right: 1rem;
 }
@@ -162,4 +156,18 @@
   font-size: 0.99rem;
   font-weight: 400;
   color: var(--secondary-text-color);
+}
+
+.btn {
+  padding: 0.5rem 1.7rem;
+  margin-top: 1rem;
+  font-family: 'robotoSlab-light';
+  border-radius: 0.4rem;
+  background-color: var(--text-color);
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #0382e4;
 }
