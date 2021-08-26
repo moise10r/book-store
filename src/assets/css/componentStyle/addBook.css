@@ -23,10 +23,15 @@
 .add-input {
   flex: 1;
   border: 1px solid var(--boder-color);
+  border-radius: 0.4rem;
   font-size: 1rem;
   color: #888888;
   padding: 0.7rem 1rem;
   margin-right: 1.5rem;
+}
+
+.add-input:focus {
+  border: 1px solid var(--text-color);
 }
 
 .add-input::placeholder {
@@ -50,6 +55,7 @@
 
 #add-book .right-container #select:focus {
   border: 1px solid var(--text-color);
+  border-radius: 0.4rem;
 }
 
 #add-book .right-container .submut-btn {
