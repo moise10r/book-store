@@ -12,7 +12,7 @@
 .book-list .book {
   width: 100%;
   padding: 2rem 1rem;
-  border: 1px solid #ccc;
+  border: 0.11rem solid var(--boder-color);
   margin-bottom: 2rem;
 }
 
