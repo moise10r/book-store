@@ -12,14 +12,26 @@
 
 @font-face {
   font-family: 'robotoSlab-bold';
-  font-weight: 900;
+  font-weight: normal;
   src: url('./RobotoSlab-Bold.ttf');
 }
 
 @font-face {
   font-family: 'robotoSlab-light';
-  font-weight: 700;
+  font-weight: normal;
   src: url('./RobotoSlab-Light.ttf');
+}
+
+@font-face {
+  font-family: 'robotoSlab-regular';
+  font-weight: normal;
+  src: url('./RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'robotoSlab-thin';
+  font-weight: normal;
+  src: url('./RobotoSlab-Thin.ttf');
 }
 
 :root {
