@@ -1,15 +1,15 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 
+/* Actions Types */
 const FECTH_BOOK = 'FECTH_BOOK';
 const ADD_BOOK = 'ADD_BOOK';
 const DELETE_BOOK = 'DELETE_BOOK';
 
-const initialState = [];
-
 const apiKey = 'KbiaiTAThbC5mkqPt08M';
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 
+/* Actions creator */
 export const getBooks = () => async (dispatch) => {
   const res = await axios.get(`${baseUrl}${apiKey}/books/`);
   dispatch({
@@ -41,6 +41,8 @@ export const addBook = (book) => async (dispatch) => {
     });
   }
 };
+
+const initialState = [];
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
