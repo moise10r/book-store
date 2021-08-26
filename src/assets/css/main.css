@@ -95,3 +95,24 @@ a {
   margin: 0 auto;
   padding-bottom: 7rem;
 }
+
+.categories {
+  margin-top: 12rem;
+}
+
+.categories p {
+  margin-right: 5rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: 'robotoSlab-light';
+  color: var(--text-color);
+}
+
+.categories .img-wrapper {
+  width: 300px;
+  height: 300px;
+}
+
+.categories .img-wrapper img {
+  max-width: 100%;
+}
