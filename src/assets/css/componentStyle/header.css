@@ -1,11 +1,27 @@
 .main-header-container {
-  width: 90%;
-  margin: 0 auto;
   height: 6.25rem;
+  border-bottom: 1.5px solid #e8e8e8;
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.main-wrapper {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .left-container {
   height: 100%;
+}
+
+.log-wrapper .logo {
+  font-size: 1.875rem;
+  font-family: 'robotoSlab-bold', sans-serif;
+  color: var(--text-color);
 }
 
 .main-nav-bar {
@@ -17,5 +33,28 @@
 }
 
 .main-nav-bar .link-list .link {
-  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.main-nav-bar .link-list .link a {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary-text-color);
+}
+
+.main-nav-bar .link-list .link a.active {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+.auth button {
+  padding: 0.8rem;
+  border: 0.1rem solid var(--boder-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.auth button .auth-icon {
+  font-size: 1.2rem;
+  color: var(--text-color);
 }

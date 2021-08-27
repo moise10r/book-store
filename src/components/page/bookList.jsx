@@ -37,11 +37,11 @@ const BookList = () => {
   }, []);
   return (
     <div className="container">
-      <div className="books-main-wrapper">
-        <ul className="book-list flex-center">
+      <div className="books-main-wrapper width-100">
+        <ul className="book-list flex-center flex width-100">
           {
       books.map((book) => (
-        <li key={book.item_id} className="book">
+        <li key={book.item_id} className="book width-100">
           <Book book={book} onClick={handleClick} />
         </li>
       ))

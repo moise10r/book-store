@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { ImUser } from 'react-icons/im';
@@ -7,30 +7,37 @@ const links = [
   { id: 1, to: '/', name: 'Books' },
   { id: 2, to: '/categories', name: 'Categories' },
 ];
-const Header = () => (
-  <header className="main-header-container flex-between">
-    <div className="left-container flex-start">
-      <div className="log-wrapper">
-        <Link to="/" className="logo">Bookstore CMS</Link>
+const Header = () => {
+  const [currentLink, setcurrentLink] = useState(null);
+  const handleClickChangeColor = (id) => {
+    setcurrentLink(id);
+  };
+  return (
+    <header className="main-header-container width-100">
+      <div className="main-wrapper flex flex-between">
+        <div className="left-container flex flex-start">
+          <div className="log-wrapper">
+            <Link to="/" className="logo">Bookstore CMS</Link>
+          </div>
+          <nav className="main-nav-bar">
+            <ul className="link-list">
+              {
+              links.map(({ id, to, name }) => (
+                <li key={id} className="link"><Link onClick={() => handleClickChangeColor(id)} className={`${currentLink === id ? 'active' : ''}`} to={to}>{name}</Link></li>
+              ))
+            }
+            </ul>
+          </nav>
+        </div>
+        <div className="auth">
+          <button type="button" className="flex flex-center">
+            <IconContext.Provider value={{ className: 'auth-icon' }}>
+              <ImUser />
+            </IconContext.Provider>
+          </button>
+        </div>
       </div>
-      <nav className="main-nav-bar">
-        <ul className="link-list">
-          {
-            links.map(({ id, to, name }) => (
-              <li key={id} className="link"><Link to={to}>{name}</Link></li>
-            ))
-          }
-        </ul>
-      </nav>
-    </div>
-    <div className="auth">
-      <button type="button">
-        <IconContext.Provider value={{ className: 'auth-icon' }}>
-          <ImUser />
-        </IconContext.Provider>
-      </button>
-    </div>
-  </header>
-);
-
+    </header>
+  );
+};
 export default Header;
