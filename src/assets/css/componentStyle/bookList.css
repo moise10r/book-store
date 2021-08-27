@@ -182,7 +182,7 @@
   border-radius: 0.4rem;
   background-color: var(--text-color);
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 .btn:hover {
