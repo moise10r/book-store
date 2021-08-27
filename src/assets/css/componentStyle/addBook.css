@@ -1,5 +1,4 @@
 .add-book-section {
-  width: 100%;
   padding-top: 2rem;
   border-top: 2px solid #e8e8e8;
 }
@@ -10,13 +9,11 @@
 }
 
 .add-book-main-container .title {
-  font-size: 1.25rem;
   color: #888;
   font-family: 'Montserrat', sans-serif;
 }
 
 #add-book {
-  width: 100%;
   margin-top: 2rem;
 }
 
