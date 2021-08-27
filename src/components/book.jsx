@@ -6,12 +6,12 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Book = ({ book, onClick }) => (
-  <div className="book-container flex-around">
+  <div className="book-container flex flex-around">
     <div className="left-container">
       <h4 className="category">{book.category}</h4>
       <h5 className="title">{book.title}</h5>
       <span className="auth">{book.author}</span>
-      <ul className="action-list flex-start">
+      <ul className="action-list flex flex-start">
         <li className="action"><a href="#2">Comment</a></li>
         <li onClick={() => onClick(book.item_id)} role="menu" className="action"><a href="#2">Remove</a></li>
         <li className="action"><a href="#2">Edit</a></li>
@@ -24,7 +24,7 @@ const Book = ({ book, onClick }) => (
           <div className="value-bar" />
         </div>
       </div>
-      <div className="percentage flex-center">
+      <div className="percentage flex flex-center">
         <span>
           {book.progress.completPercentage}
           %

@@ -38,7 +38,7 @@ const BookList = () => {
   return (
     <div className="container">
       <div className="books-main-wrapper width-100">
-        <ul className="book-list flex-center width-100">
+        <ul className="book-list flex-center flex width-100">
           {
       books.map((book) => (
         <li key={book.item_id} className="book width-100">
