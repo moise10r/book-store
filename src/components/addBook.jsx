@@ -7,9 +7,9 @@ const AddBook = ({ onChange, onSubmit, value }) => (
   <section className="add-book-section width-100">
     <div className="add-book-main-container width-100">
       <h3 className="title">ADD NEW BOOK</h3>
-      <form id="add-book" className="flex-between width-100" onSubmit={onSubmit}>
+      <form id="add-book" className="flex-between flex width-100" onSubmit={onSubmit}>
         <Input onChange={onChange} name={Object.keys(value)[0]} value={value.title} />
-        <div className="right-container flex-between">
+        <div className="right-container flex-between flex">
           <Select onChange={onChange} name={Object.keys(value)[1]} value={value.categories} />
           <button type="submit" className="submut-btn"> ADD BOOK</button>
         </div>

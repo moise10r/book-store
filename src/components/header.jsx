@@ -14,8 +14,8 @@ const Header = () => {
   };
   return (
     <header className="main-header-container width-100">
-      <div className="main-wrapper flex-between">
-        <div className="left-container flex-start">
+      <div className="main-wrapper flex flex-between">
+        <div className="left-container flex flex-start">
           <div className="log-wrapper">
             <Link to="/" className="logo">Bookstore CMS</Link>
           </div>
@@ -30,7 +30,7 @@ const Header = () => {
           </nav>
         </div>
         <div className="auth">
-          <button type="button" className="flex-center">
+          <button type="button" className="flex flex-center">
             <IconContext.Provider value={{ className: 'auth-icon' }}>
               <ImUser />
             </IconContext.Provider>
