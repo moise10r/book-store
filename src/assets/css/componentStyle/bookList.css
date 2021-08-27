@@ -1,16 +1,12 @@
 .books-main-wrapper {
-  width: 100%;
   margin-top: 10rem;
 }
 
 .book-list {
-  width: 100%;
-  margin: 0 auto;
   flex-direction: column;
 }
 
 .book-list .book {
-  width: 100%;
   padding: 2rem 1rem;
   border: 0.11rem solid var(--boder-color);
   margin-bottom: 2rem;
