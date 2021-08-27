@@ -16,6 +16,10 @@
   margin-bottom: 2rem;
 }
 
+.book-list .book .left-container {
+  margin-left: -4rem;
+}
+
 .book-list .book .category {
   color: #888;
   font-size: 0.873rem;
@@ -58,6 +62,18 @@
 
 .center-container {
   display: flex;
+  position: relative;
+  padding-right: 7rem;
+}
+
+.center-container::after {
+  position: absolute;
+  content: '';
+  height: 3rem;
+  width: 2px;
+  top: 30%;
+  right: 0;
+  background-color: var(--boder-color);
 }
 
 .progress-circle {
@@ -166,7 +182,7 @@
   border-radius: 0.4rem;
   background-color: var(--text-color);
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
 }
 
 .btn:hover {

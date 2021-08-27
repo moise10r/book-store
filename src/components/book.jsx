@@ -6,7 +6,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Book = ({ book, onClick }) => (
-  <div className="book-container flex-between">
+  <div className="book-container flex-around">
     <div className="left-container">
       <h4 className="category">{book.category}</h4>
       <h5 className="title">{book.title}</h5>
