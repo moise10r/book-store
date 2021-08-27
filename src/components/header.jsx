@@ -13,7 +13,7 @@ const Header = () => {
     setcurrentLink(id);
   };
   return (
-    <header className="main-header-container">
+    <header className="main-header-container width-100">
       <div className="main-wrapper flex-between">
         <div className="left-container flex-start">
           <div className="log-wrapper">
